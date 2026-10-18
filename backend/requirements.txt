@@ -1,0 +1,7 @@
+fastapi
+uvicorn[standard]
+python-multipart
+pillow
+numpy
+tensorflow>=2.20
+keras>=3.13   # model disimpan dengan Keras 3.13.2; versi lebih lama bisa gagal memuatnya
