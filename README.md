@@ -25,7 +25,7 @@ Model hasil training **sudah termasuk** di `backend/models/`:
 
 `preprocess.py` di `backend/` adalah file yang sama dengan yang dipakai saat training.
 Untuk mengganti model, timpa file-file di atas dengan hasil ekspor notebook (`fruitvision_export.zip`).
-Python 3.10 sampai 3.13 disarankan (syarat TensorFlow).
+Python 3.10 sampai 3.14 didukung (di 3.14 pakai TF ≥2.22 — sudah diatur otomatis di `requirements.txt`).
 
 ## Performa model (jujur)
 Hasil 5-fold per blok ID pada 8.461 foto: **akurasi 0,78 (±0,10 antar fold), macro F1 0,72**.
@@ -71,7 +71,7 @@ langsung di dalam Streamlit, jadi **tidak perlu server FastAPI terpisah** — cu
    | Repository | `<username>/fruitvision` |
    | Branch | `main` |
    | Main file path | `streamlit_app.py` |
-   | Advanced settings → Python version | **3.12** (wajib — TensorFlow belum kompatibel dengan Python lebih baru) |
+   | Advanced settings → Python version | **3.12** atau **3.14** — keduanya didukung (`requirements.txt` otomatis memilih TF yang cocok) |
 4. Tunggu build 5–10 menit → selesai. App bisa diakses di `https://<nama-pilihan>.streamlit.app`.
 
 Catatan untuk versi cloud:

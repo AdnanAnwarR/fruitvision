@@ -2,5 +2,9 @@ streamlit>=1.49
 pandas
 pillow
 numpy
-tensorflow>=2.20
+# TensorFlow: Streamlit Cloud memakai Python 3.14 (TF stabil belum punya wheel cp314),
+# jadi cabang khusus 3.14 mengizinkan prerelease 2.22.0rc0 (sudah teruji lokal & identik
+# dengan backend/.venv). Python <=3.13 tetap memakai TF stabil seperti biasa.
+tensorflow>=2.20; python_version < "3.14"
+tensorflow>=2.22.0rc0; python_version >= "3.14"
 keras>=3.13   # model disimpan dengan Keras 3.13.2; versi lebih lama bisa gagal memuatnya
